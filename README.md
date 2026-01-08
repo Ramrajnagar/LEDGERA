@@ -6,7 +6,7 @@
 ![Blockchain](https://img.shields.io/badge/Blockchain-Ganache-orange)
 
 ## 📋 Overview
-A decentralized supply chain simulation platform with AI agents, 3D visualization, and blockchain integration for transparent operations.
+A decentralized supply chain simulation platform with AI agents, 3D visualizatio, and blockchain integration for transparent operations.
 
 ## ✨ Features
 - **3D Interactive Visualization** - Real-time 3D supply chain network
