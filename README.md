@@ -14,7 +14,7 @@ A decentralized supply chain simulation platform with AI agents, 3D visualizatio
 - **Smart Negotiation** - Real-time contract negotiation using LangChain
 - **Route Optimization** - Dijkstra algorithm for optimal routing
 - **Blockchain Integration** - Secure transaction logging with Ganache
-- **Real-time Monitoring** - Live dashboard with WebSocket updates
+- **Real-time Monitoring** - Live dashboard with WebSocket update
 
 ## 🚀 Quick Start
 
