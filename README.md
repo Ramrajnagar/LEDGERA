@@ -20,7 +20,7 @@
 *   **Autonomous Orchestration**: Multi-agent swarms (Supplier, Warehouse, Transport) negotiate logistics without human intervention.
 *   **Immutable Audit Trail**: Every state change (Order -> Shipped -> Delivered) is cryptographically committed.
 *   **Deterministic Execution**: Smart contracts ensure funds are only released upon verified delivery.
-*   **Privacy-First**: Designed for Zero-Knowledge (ZK) compliance (Roadmap 2032).
+*   **Privacy-First**: Designed for Zero-Knowledge (ZK) compliance (Enterprise version).
 
 ---
 
@@ -79,17 +79,16 @@ graph TD
 
 ---
 
-## 3. Mission 2032 Roadmap
+## 3. Mission Enterprise Roadmap
 
-We are currently in **Phase 1 (Foundation)**. Our 6-year roadmap aims to evolve LEDGERA into a fully autonomous economy.
+We are currently in **Phase 1 (Foundation)**. Our  roadmap aims to evolve LEDGERA into a fully autonomous economy.
 
 | Phase | Est. Timeline | Focus | Key Feature |
 | :--- | :--- | :--- | :--- |
-| **I** | **2025-2026** | **Foundation** | Autonomous Swarms & Ledger Integration |
-| **II** | 2027-2028 | Privacy | Zero-Knowledge Proofs (ZK-Snarks) for Suppliers |
-| **III** | 2029-2032 | Autonomy | Autonomous Negotiation Protocol (ANP) & DAO |
+| **I** | **2025-present** | **Foundation** | Autonomous Swarms & Ledger Integration |
+| **II** | WHO KNOWS | Privacy | Zero-Knowledge Proofs (ZK-Snarks) for Suppliers |
+| **III** | COOMING SOON | Autonomy | Autonomous Negotiation Protocol (ANP) & DAO |
 
-*For full details, see [project_blueprint_2032.md](project_blueprint_2032.md).*
 
 ---
 
