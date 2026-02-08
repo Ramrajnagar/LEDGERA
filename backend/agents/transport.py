@@ -1,7 +1,11 @@
-from crewai import Agent
-from langchain_openai import ChatOpenAI
+from crewai import Agent, LLM
+import os
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+llm = LLM(
+    model="gemini/gemini-1.5-flash-latest",
+    temperature=0.2,
+    api_key=os.getenv("GOOGLE_API_KEY")
+)
 
 transport_agent = Agent(
     role="Transport Agent",

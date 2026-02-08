@@ -1,0 +1,11 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: The Immutable Stack -->
+  <g fill="black">
+    <rect x="0" y="10" width="60" height="15" />
+    <rect x="0" y="35" width="60" height="15" />
+    <rect x="0" y="60" width="60" height="15" />
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="85" y="62" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-weight="bold" font-size="60" letter-spacing="-2" fill="black">LEDGERA</text>
+</svg>

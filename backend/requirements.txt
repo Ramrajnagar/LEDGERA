@@ -1,6 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
+websockets
 pandas
 langchain
+langchain-google-genai
 crewai
 python-dotenv
+pydantic-settings
+python-multipart
+aiofiles
