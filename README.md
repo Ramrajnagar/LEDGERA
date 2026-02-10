@@ -1,146 +1,81 @@
-![LEDGERA Header](assets/ledgera_header.svg)
 
-# LEDGERA
-> **Autonomous Trade Infrastructure**
+# LEDGERA | Decentralized Supply Chain OS
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/ledgera/core)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/status-alpha-orange)](https://ledgera.network)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-production_prototype-green.svg)
+![Stack](https://img.shields.io/badge/stack-Next.js_15-000000.svg)
 
----
+**Trust is Good. Verification is Better.**
 
-## 1. System Overview
+Ledgera is a deterministic state machine for global trade execution. It replaces opaque logistics with a transparent, cryptographically verifiable operating system. By synchronizing physical movement with digital settlement in real-time, it eliminates disputes and accelerates capital turnover.
 
-**LEDGERA** is an operating system for autonomous supply chains. Unlike traditional ERPs that simply *record* data, LEDGERA uses autonomous agents to *negotiate, execute, and settle* trade logistics on an immutable ledger.
+## 🚀 Features
 
-**Core Philosophy**: "Code is Law. Agents are Executors."
+### Public Brand (`/`)
+- **Cinematic Experience**: Scroll-linked storytelling with Framer Motion.
+- **Light Theme**: Clean, professional aesthetic for public-facing trust.
+- **Architecture Visualization**: Interactive SVG topology diagrams.
 
-### Key Capabilities
-*   **Autonomous Orchestration**: Multi-agent swarms (Supplier, Warehouse, Transport) negotiate logistics without human intervention.
-*   **Immutable Audit Trail**: Every state change (Order -> Shipped -> Delivered) is cryptographically committed.
-*   **Deterministic Execution**: Smart contracts ensure funds are only released upon verified delivery.
-*   **Privacy-First**: Designed for Zero-Knowledge (ZK) compliance (Roadmap 2032).
+### Control Room (`/dashboard`)
+- **Command Interface**: Dark-mode, high-contrast aesthetic designed for long-session monitoring.
+- **Live Geo-Spatial Tracking**: Real-time asset visualization using MapLibre GL.
+- **Agent Decision Feed**: distinct log of automated system actions (Escrow release, Risk flag, etc.).
+- **Trust Scores**: Dynamic entity reputation visualization.
 
----
+### Security Core
+- **Zero Trust Architecture**: Every interaction is signed and verifiable.
+- **Non-Custodial Escrow**: Smart contracts hold funds, released only upon cryptographic proof of delivery.
+- **Identity (DID)**: Portable reputation attached to decentralized identifiers.
 
-## 2. Architecture
+## 🛠️ Tech Stack
 
-LEDGERA follows a strict hierarchical control flow, separating Intent (Frontend) from Truth (Ledger).
+- **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS v4.
+- **Animation**: Framer Motion, CSS Native Scroll-Linked Effects.
+- **Mapping**: MapLibre GL JS.
+- **Backend (In-Progress)**: Supabase (PostgreSQL + Realtime), Prisma ORM.
 
-```mermaid
-graph TD
-    %% Styles
-    classDef box fill:#fff,stroke:#000,stroke-width:2px,color:#000;
-    classDef layer fill:none,stroke:none,color:#666;
+## 📦 Installation
 
-    subgraph Top [FRONTEND CONTROL SURFACE]
-        direction TB
-        UI[Maps / KPIs / Digital Twins]:::box
-    end
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/ledgera.git
+    cd ledgera
+    ```
 
-    subgraph Middle [ORCHESTRATION LAYER]
-        Orch[Orchestrator]:::box
-    end
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-    subgraph Agents [AUTONOMOUS AGENTS]
-        direction LR
-        A1[Supplier Agent]:::box
-        A2[Warehouse Agent]:::box
-        A3[Transport Agent]:::box
-    end
+3.  **Environment Setup**
+    Copy `.env.local.example` to `.env.local` and add your Supabase credentials.
+    ```bash
+    cp .env.local.example .env.local
+    ```
 
-    subgraph Exec [EXECUTION INTERFACES]
-        direction LR
-        I1(ILedger):::box
-        I2(IPayment):::box
-    end
+4.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
 
-    subgraph Bottom [TRUTH LAYER]
-        Ledger[Immutable Ledger]:::box
-    end
+5.  **Build for Production**
+    ```bash
+    npm run build
+    npm start
+    ```
 
-    %% Connections
-    UI -->|Intent| Orch
-    Orch -->|Coordination| A1
-    Orch -->|Coordination| A2
-    Orch -->|Coordination| A3
-    
-    A1 -->|Execute| I1
-    A2 -->|Execute| I1
-    A3 -->|Execute| I1
-    
-    I1 -->|Commit| Ledger
-    I2 -->|Transact| Ledger
+## 🏗️ Architecture
 
-    %% Link Styles
-    linkStyle default stroke:#000,stroke-width:1px,fill:none;
-```
+The system follows a hybrid architecture:
+1.  **Edge Gateway**: IoT sensors push telemetry via MQTT/WebSockets.
+2.  **Supabase Realtime**: Normalizes data and broadcasts state changes.
+3.  **Agent Engine**: Subscribes to streams and executes deterministic logic (e.g., "If Temp > 4C, Trigger Claim").
+4.  **Blockchain Anchor**: Hashes critical events to a public ledger for auditability.
 
----
+## 📜 License
 
-## 3. Mission 2032 Roadmap
-
-We are currently in **Phase 1 (Foundation)**. Our 6-year roadmap aims to evolve LEDGERA into a fully autonomous economy.
-
-| Phase | Est. Timeline | Focus | Key Feature |
-| :--- | :--- | :--- | :--- |
-| **I** | **2025-2026** | **Foundation** | Autonomous Swarms & Ledger Integration |
-| **II** | 2027-2028 | Privacy | Zero-Knowledge Proofs (ZK-Snarks) for Suppliers |
-| **III** | 2029-2032 | Autonomy | Autonomous Negotiation Protocol (ANP) & DAO |
-
-*For full details, see [project_blueprint_2032.md](project_blueprint_2032.md).*
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 4. Developer Start
-
-### Prerequisites
-*   Python 3.10+
-*   Node.js 18+
-*   OpenAI API Key (for Agent Swarm)
-
-### System Boot
-
-**1. Initialize Ledger & Orchestrator (Backend)**
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env      # Add keys
-python main.py
-```
-
-**2. Launch Control Surface (Frontend)**
-```bash
-cd NewFrontend/DISCO
-npm install
-npm run dev
-```
-
-### Access Points
-*   **Control Surface**: `http://localhost:5173`
-*   **API Gateway**: `http://localhost:8000/docs`
-*   **Ledger Explorer**: `http://localhost:5173/analytics`
-
----
-
-## 5. Directory Structure
-
-```text
-/backend
-    /agents          # CrewAI Agent Definitions (Logic)
-    /blockchain      # Ledger Implementation (Truth)
-    /workflow        # Swarm Orchestration (Coordination)
-    /analytics       # Trust Scoring & Metrics
-
-/NewFrontend/DISCO
-    /src/components  # React UI Components
-    /src/services    # API Interfaces
-```
-
----
-
-> **License**: MIT  
-> **Maintainer**: LEDGERA Core Team
+**Ledgera** — _Orchestrating the World's Trade._
