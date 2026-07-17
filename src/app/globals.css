@@ -52,9 +52,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Smooth Scrolling setup */
-html {
-  scroll-behavior: smooth;
-}
+/* Lenis handles smooth scroll via JS - do NOT set scroll-behavior: smooth */
 
 /* Typography Utility */

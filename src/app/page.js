@@ -66,6 +66,9 @@ export default function LandingPage() {
                 Supply Chain<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Orchestration</span>
               </h1>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-500 text-[11px] font-medium mb-10 w-fit tracking-wide">
+                NOT BACKED BY Y COMBINATOR
+              </div>
               <p className="text-xl text-neutral-600 mb-10 max-w-lg leading-relaxed">
                 A unified ledger for global logistics. Track, verify, and settle shipments in real-time with zero-trust architecture.
               </p>
