@@ -86,6 +86,10 @@ export default function DigitalTwinWidget() {
             }
             geometry.dispose();
             material.dispose();
+            coreGeo.dispose();
+            coreMat.dispose();
+            ringGeo.dispose();
+            ringMat.dispose();
             renderer.dispose();
         };
     }, []);

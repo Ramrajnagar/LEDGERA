@@ -14,7 +14,7 @@ export default function TrustScoreWidget() {
                 <div className="text-xs font-mono text-control-muted uppercase mb-2">Global Trust Health</div>
 
                 <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl font-mono font-bold text-control-text tracking-tighter shadow-green-500 drop-shadow-lg">98.4</span>
+                    <span className="text-5xl font-mono font-bold text-control-text tracking-tighter drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]">98.4</span>
                     <span className="text-sm font-mono text-control-muted">/100</span>
                 </div>
 

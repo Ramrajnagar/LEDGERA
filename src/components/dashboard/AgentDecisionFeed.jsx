@@ -14,8 +14,19 @@ export default function AgentDecisionFeed() {
     const simulation = useSimulation();
     const systemAlerts = simulation?.systemAlerts || [];
 
+    // Normalize system alerts to match decision shape
+    const normalizedAlerts = systemAlerts.map(a => ({
+        id: a.id,
+        time: a.time || new Date().toLocaleTimeString(),
+        agent: 'SYSTEM_AI',
+        action: 'ALERT',
+        target: a.msg || 'Unknown',
+        reason: a.msg || '',
+        type: a.type || 'info',
+    }));
+
     // Combine live alerts with static baseline
-    const displayFeed = [...systemAlerts, ...decisions].slice(0, 10);
+    const displayFeed = [...normalizedAlerts, ...decisions].slice(0, 10);
 
     return (
         <div className="flex flex-col h-full bg-control-panel border border-control-border">

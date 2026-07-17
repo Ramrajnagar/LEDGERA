@@ -80,8 +80,9 @@ export default function NetworkHero() {
         window.addEventListener('mousemove', handleMouseMove);
 
         // Animation Loop
+        let frameId;
         const animate = () => {
-            requestAnimationFrame(animate);
+            frameId = requestAnimationFrame(animate);
 
             // Rotation
             globe.rotation.y += 0.002;
@@ -108,6 +109,7 @@ export default function NetworkHero() {
 
         // Cleanup
         return () => {
+            cancelAnimationFrame(frameId);
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('resize', handleResize);
             if (mountRef.current) {
@@ -115,6 +117,10 @@ export default function NetworkHero() {
             }
             geometry.dispose();
             material.dispose();
+            particlesGeometry.dispose();
+            particlesMaterial.dispose();
+            lineGeometry.dispose();
+            lineMaterial.dispose();
             renderer.dispose();
         };
     }, []);

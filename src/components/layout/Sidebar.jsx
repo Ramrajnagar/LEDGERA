@@ -7,10 +7,10 @@ import { LayoutDashboard, Map, Activity, Shield, Package, Settings, LogOut } fro
 
 const navItems = [
     { href: "/dashboard", label: "OVERVIEW", icon: LayoutDashboard },
-    { href: "/dashboard/map", label: "LIVE_MAP", icon: Map },
-    { href: "/dashboard/decisions", label: "AGENT_LOGS", icon: Activity },
-    { href: "/dashboard/escrow", label: "ESCROW", icon: Shield },
-    { href: "/dashboard/shipments", label: "CARGO", icon: Package },
+    { href: "/architecture", label: "ARCHITECTURE", icon: Map },
+    { href: "/security", label: "SECURITY", icon: Activity },
+    { href: "/login", label: "ESCROW", icon: Shield },
+    { href: "/login", label: "CARGO", icon: Package },
 ];
 
 export default function Sidebar() {
