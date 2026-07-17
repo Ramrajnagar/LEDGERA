@@ -66,7 +66,8 @@ export default function LandingPage() {
                 Supply Chain<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Orchestration</span>
               </h1>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-500 text-[11px] font-medium mb-10 w-fit tracking-wide">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F26522]/10 border border-[#F26522]/20 text-[#F26522] text-[11px] font-semibold mb-10 w-fit tracking-wide">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.82 0H1.18C.53 0 0 .53 0 1.18v21.64c0 .65.53 1.18 1.18 1.18h10.38v-8.7H8.87v-3.4h2.69V9.42c0-2.66 1.62-4.11 4-4.11 1.13 0 2.09.08 2.37.12v2.75h-1.63c-1.27 0-1.51.6-1.51 1.48v1.95h3.06l-.4 3.4h-2.66v8.7h5.22c.65 0 1.18-.53 1.18-1.18V1.18C24 .53 23.47 0 22.82 0z"/></svg>
                 NOT BACKED BY Y COMBINATOR
               </div>
               <p className="text-xl text-neutral-600 mb-10 max-w-lg leading-relaxed">
